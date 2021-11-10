@@ -7,9 +7,19 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   </head>
 
   <body>
-    <%= yield %>
+    <div class="container">
+      <div class="banner">
+        <div class="d-flex justify-content-between align-items-center pt-3 pb-1">
+          <h1>Yelp Restaurant</h1>
+          <%= link_to "+ Add a restaurant", new_restaurant_path %>
+        </div>
+      </div>
+      <%= yield %>
+    </div>
   </body>
 </html>
